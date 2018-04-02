@@ -17,8 +17,9 @@
 
  <!-- CSS StyleSheet -->
   <link rel="stylesheet" href="assets/css/style.css">
-
   
+    
+  <title>Find Food</title>
 
 </head>
 <body>
@@ -49,51 +50,46 @@
       
             
     <!-- Container (quiz Section) -->
+    <br><br><br>
+    <div class="ui container" id="mainInformationDiv">
+        <div class="logoDiv">
+            <h1 id="logoText">Find food made by pro</h1>
+            <hr>
+        </div>
 
-          <br><br><br>
-          <div class="ui container" id="mainInformationDiv">
-              <div class="logoDiv">
-                  <h1 id="logoText">Find Food Made by Pro</h1>
-                  <hr>
+      <div id="mainPage">
+          <div id="search-form">
+
+              <div class = "form-group">
+                  <label for="keyword">What are you in the mood for?</label>
+                  <input class = "form-control" type="text" id="keyword" placeholder="Example: Hamburger, Sushi, Pasta, Salad">
               </div>
-              <div id="mainPage">
-                  <div id="search-form">
-                      <h4>What are you in the mood for?</h4>
-                      <div class="ui fluid input">
-                          <input type="text" id="keyword" placeholder="Example: Hambergur, Sushi, Pasta, Salad">
-                      </div>
-                      <h4>What is your current location? </h4>
-                      <div class="ui fluid input">
-                          <input type="text" id="location" placeholder="Example:Atlanta or 30301 ">
-                      </div>
-                  </div>
-                  <div>
-                      <h4>How far are you willing to go?
-                      </h4>
-                      <div class="ui fluid input">
-                          <input type="text" id="radius" placeholder="Example: 10 miles">
-                      </div>
-                      
-                  </div>
-                  <div>
-                          <h4>What is your price range?</h4>
-                          <div class="ui fluid input">
-                              <input type="text" id="price" placeholder="Example: pick number from 1 to 4">
-                          </div>
-                  
-                          <div>
-                              <h4>Do you wanna go right now?</h4>
-                              <div class="ui fluid input">
-                                  <input type="text" id="opennow" placeholder="Example: yes or no">
-                              </div>
-                         
-                      </div>
-                 
-                 <!-- <div class="form-group col-sm-6">
-                          <label for="exclude">Exclude (min):</label>
-                          <input type="text" class="form-control" id="exclude">
-                      </div> -->
-      
+
+              <div class = "form-group">
+                <label for="location">What is your current location?</label>
+                <input class = "form-control" type="text" id="location" placeholder="Example: 30301 or Atlanta">
+            </div>
+
+            <div class = "form-group">
+                <label for="radius">How far are you willing to go? (miles)</label>
+                <input class = "form-control" type="text" id="radius" placeholder="Example: 5, 10, 20">
+            </div>
+
+            <div class = "form-group">
+                <label for = "price">What is your price range? ($)</label><br>
+                <input class ="form-control" type="text" id="minPrice" placeholder ="10" style = "width: 45%; display: inline-block;">
+                <input class ="form-control" type="text" id="maxPrice" placeholder ="50" style = "width: 45%; display: inline-block;">
+            </div>
+
+            <div class = "form-group">
+                <label for = "openNow">Do you wanna go right now?</label>
+                <form>
+                    <div>
+                      <input type="checkbox" id="goNow" name="yes" value="Yes">            
+                      <label for="Yes">Yes</label>
+                    </div>
+            </div>
+
                       <button class="btn btn-secondary center-block mt-5 " id="submit">Submit</button>
                   </div><!-- panel body-->              
 </body>
