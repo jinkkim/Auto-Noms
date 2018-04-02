@@ -16,6 +16,8 @@ $(document).ready(function() {
 
     $("#submit").click(function() {
 
+        $("#results").empty();
+
         keyword = $("#keyword").val().trim();
         health = $("#health").val();
         diet = $("#diet").val();
