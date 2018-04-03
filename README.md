@@ -11,8 +11,6 @@
 - on the web browser, type   localhost:8888. Then your homepage will open.
 
 
-
-
 2. Install "Allow-Control-Allow-Origin" plugin 
 - Because of technical security issues , ajax sometimes does not work properly. You can bypass this issue by installing a chrome plugins.
 - go to 
