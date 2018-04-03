@@ -81,8 +81,26 @@ $(document).ready(function() {
         }).done(function(result){
             console.log(result);
             //todo
+            print(result);
         })
          
     });
 
+      
+        
+        function print(result){
+            var searchResult = "";
+            searchResult = result.results[1].name;
+            // result.results[i].vicinity - address
+
+
+            //for (var i=0; i< 10; i++){
+            //    searchResults +=   
+                                    
+    
+        $("#searchResult").text(searchResult);
+        }
+    
+    
+    
 })
