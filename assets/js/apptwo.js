@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    var appID = "8b9a4ae4";
-    var appKey = "d59a3d4647f951d776317b9e7b83622f";
+    var appID = "9e9091d6";
+    var appKey = "8b537d394573e519094a3e3565ef8867";
     var keyword = "" ;
     var diet = "";             
     var health = "";
