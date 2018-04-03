@@ -159,6 +159,7 @@ footer .glyphicon {
     -webkit-animation-duration: 1s;
     visibility: visible;
 }
+
 @keyframes slide {
   0% {
     opacity: 0;
@@ -194,3 +195,4 @@ footer .glyphicon {
       font-size: 150px;
   }
 }
+
