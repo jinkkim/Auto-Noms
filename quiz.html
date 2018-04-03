@@ -32,7 +32,7 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="#myPage">Auto-noms</a>
+                    <a class="navbar-brand" href="#myPage">Auto-Noms</a>
                   </div>
                   <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -52,33 +52,48 @@
     <!-- Container (quiz Section) -->
     <br><br><br>
     <div class="ui container" id="mainInformationDiv">
-        <div class="logoDiv">
+      <div class="logoDiv">
             <h1 id="logoText">Find food made by pro</h1>
             <hr>
-        </div>
+      </div><!--logo div --> 
 
       <div id="mainPage">
           <div id="search-form">
 
-              <div class = "form-group">
-                  <label for="keyword">What are you in the mood for?</label>
-                  <input class = "form-control" type="text" id="keyword" placeholder="Example: Hamburger, Sushi, Pasta, Salad">
-              </div>
-
-              <div class = "form-group">
-                <label for="location">What is your current location?</label>
-                <input class = "form-control" type="text" id="location" placeholder="Example: 30301 or Atlanta">
+            <div class = "form-group">
+                <label for="keyword">What are you in the mood for?</label>
+                <input class = "form-control" type="text" id="keyword" placeholder="Example: Hamburger, Sushi, Pasta, Salad">
             </div>
 
             <div class = "form-group">
-                <label for="radius">How far are you willing to go? (miles)</label>
+              <label for="location">What is your current location?* (required) </label>
+              <input class = "form-control" type="text" id="zipcode" placeholder="Example: 30308 (Now only zipcode is available)">
+            </div>
+
+            <div class = "form-group">
+                <label for="radius">How far are you willing to go?* (required) (miles)</label>
                 <input class = "form-control" type="text" id="radius" placeholder="Example: 5, 10, 20">
             </div>
 
             <div class = "form-group">
-                <label for = "price">What is your price range? ($)</label><br>
-                <input class ="form-control" type="text" id="minPrice" placeholder ="10" style = "width: 45%; display: inline-block;">
-                <input class ="form-control" type="text" id="maxPrice" placeholder ="50" style = "width: 45%; display: inline-block;">
+                <label for = "price">What is your price range? ($~$$$$$)</label><br>
+                <select class ="form-control" type="text" id="minPrice" style = "width: 40%; display: inline-block;">
+                  <option value=""></option>
+                  <option value="0">$</option>
+                  <option value="1">$$</option>
+                  <option value="2">$$$</option>
+                  <option value="3">$$$$</option>
+                </select>
+                  
+                <select class ="form-control" type="text" id="maxPrice" style = "width: 40%; display: inline-block;">
+                  <option value=""></option>
+                  <option value="0">$</option>
+                  <option value="1">$$</option>
+                  <option value="2">$$$</option>
+                  <option value="3">$$$$</option>
+                  <option value="4">$$$$$</option>
+
+                </select>
             </div>
 
             <div class = "form-group">
@@ -90,8 +105,16 @@
                     </div>
             </div>
 
-                      <button class="btn btn-secondary center-block mt-5 " id="submit">Submit</button>
-                  </div><!-- panel body-->              
+            <button class="btn btn-secondary center-block mt-5 " id="submit">Submit</button>
+          </div><!-- search-form-->
+
+          <img class="img-responsive" src="assets/images/powered-by-google-on-white.png"  width="144" height="18">
+          
+          <div id = "query-result">
+          </div> <!--query result --> 
+
+      </div><!--main page -->
+    </div><!--main information -->     
 </body>
 <script src="assets/js/app.js"></script>
 </html>
