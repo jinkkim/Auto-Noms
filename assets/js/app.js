@@ -13,7 +13,7 @@ $(document).ready(function() {
     $("#submit").click(function(event) {
 
         event.preventDefault();
-        $("#query-result").empty();
+        $("#searchResult").empty();
 
         //location (required)
         zipcode = $("#zipcode").val().trim();
@@ -80,26 +80,78 @@ $(document).ready(function() {
             method: 'GET'
         }).done(function(result){
             console.log(result);
-            //todo
-            print(result);
+            
+            //display results in panel
+
+            //entire panel group
+            var panelGroup = $("<div>");
+            panelGroup.addClass("panel-group")
+            panelGroup.attr("id","accordion")
+
+            for (var i=0; i<10; i++) {
+
+                //panels
+                var panelOne = $("<div>");
+                panelOne.addClass("panel panel-default");
+
+                //panel heading
+                var panelHeading = $("<div>");
+                panelHeading.addClass("panel-heading");
+
+                //panel title
+                var panelTitle = $("<h4>");
+                panelTitle.addClass("panel-title");
+                var restaurantName = $("<a>");
+                restaurantName.attr("data-toggle", "collapse");
+                restaurantName.attr("data-parent", "#accordion");
+                restaurantName.attr("href", "#collapse" + i.toString());
+                restaurantName.text(result.results[i].name);
+            
+                var rating = result.results[i].rating;
+                var priceLevel = "$".repeat(result.results[i].price_level);
+                var tempInfo = $("<i>").text(priceLevel + "  ·  " + rating );
+                tempInfo.attr("style","float:right;");
+                restaurantName.append(tempInfo);
+                
+                //panel body
+                var panelBody = $("<div>");
+                panelBody.addClass("panel-collapse collapse");
+                var tempID = "collapse" + i.toString();
+                panelBody.attr("id",tempID);
+
+                //attach search results for panel body
+                var panelContents = $("<div>");
+                panelContents.addClass("panel-body");
+
+                //search results - picture
+                var restaurantImg = $("<img>");
+                restaurantImg.attr("align","left");
+                restaurantImg.attr("style","margin-right:30px;");
+                var imagAddress = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200"
+                                    + "&photoreference=" + result.results[i].photos[0].photo_reference
+                                    + "&key=" + appKey;
+                restaurantImg.attr("src", imagAddress );
+
+                //search results - text
+                var restaurantInfo = "<b>" + result.results[i].name + "</b><br>" + result.results[i].vicinity;
+
+                //attach elements to panel
+                panelContents.append(restaurantImg);
+                panelContents.append(restaurantInfo);
+                panelBody.append(panelContents);
+                panelTitle.append(restaurantName);
+                panelHeading.append(panelTitle);
+                panelOne.append(panelHeading);
+                panelOne.append(panelBody);
+                panelGroup.append(panelOne);
+            }
+
+            $("#searchResult").append(panelGroup);
+            
+
         })
          
     });
-
-      
-        
-        function print(result){
-            var searchResult = "";
-            searchResult = result.results[1].name;
-            // result.results[i].vicinity - address
-
-
-            //for (var i=0; i< 10; i++){
-            //    searchResults +=   
-                                    
-    
-        $("#searchResult").text(searchResult);
-        }
     
     
     
