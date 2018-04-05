@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700');
 html, body {
     height: 100%;
@@ -845,7 +846,6 @@ footer .social-grid {
     text-align: left;
     text-transform: uppercase;
 }
-<<<<<<< HEAD
 .single-blog-footer .label-size a {
     color: #fff;
     display: inline-block;
@@ -863,15 +863,6 @@ footer .social-grid {
     float: left;
     font-size: 13px;
     margin: 0 4px 4px 0;
-=======
-
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  } 
-  100% {
->>>>>>> bf0b17b8bd64635627fa0efd0788a208272bc2af
     opacity: 1;
     transition: all 0.4s ease 0s;
     line-height: 1.2;
@@ -1185,7 +1176,6 @@ html .btn-primary:hover{
     background: #000;
     border-color: #000;
 }
-<<<<<<< HEAD
 .btn-circle {
     border-radius: 35px;
 }
@@ -1399,6 +1389,3 @@ mark, .mark {
          position: relative;
        }
         
-=======
-
->>>>>>> bf0b17b8bd64635627fa0efd0788a208272bc2af
