@@ -127,7 +127,7 @@ $(document).ready(function() {
                 var restaurantImg = $("<img>");
                 restaurantImg.attr("align","left");
                 restaurantImg.attr("style","margin-right:30px;");
-                var imagAddress = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200"
+                var imagAddress = "https://maps.googleapis.com/maps/api/place/photo?maxheight=200"
                                     + "&photoreference=" + result.results[i].photos[0].photo_reference
                                     + "&key=" + appKey;
                 restaurantImg.attr("src", imagAddress );
