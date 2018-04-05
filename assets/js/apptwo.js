@@ -72,12 +72,13 @@ $(document).ready(function() {
         })
         .done(function(result) {
             console.log(result);
-            var recipe = "";
-            var recipe_container = "";
+
+            var recipe_container = $("<div>");
+            recipe_container.addClass("container m-5 p-5");
             
             for (var i=0; i < 10; i++) {
                 
-                recipe = $("<a>");
+                var recipe = $("<a>");
                 recipe.attr("href",result.hits[i].recipe.url);
                 
                 //image
@@ -86,28 +87,34 @@ $(document).ready(function() {
                 image.attr("style","width:200px; height:200px; margin-right:30px;");
                 image.attr("src", result.hits[i].recipe.image);
                 recipe.append(image);
+                
 
                 //text
                 //title
-                recipe.append("<b>" + result.hits[i].recipe.label + "</b><br>");
+                var temp_title = "<b>" + result.hits[i].recipe.label + "</b>(calories: " + Math.round(result.hits[i].recipe.calories) + ")<br>";
+                recipe.append(temp_title);
                 //ingredient
                 var ingre = result.hits[i].recipe.ingredientLines;
                 var ingre_text = $("<ul>");
-                for (var j=0; j<ingre.length; j++){
+                var ingredientNr = ingre.length;
+                if (ingredientNr > 8) {
+                    ingredientNr = 8;
+                }
+                for (var j=0; j < ingredientNr; j++){
                     ingre_text.append("<li>" + ingre[j] + "</li>");
                 }
 
                 recipe.append(ingre_text);
-
-                recipe_container = $("<div>");
-                recipe_container.addClass("container m-1");
-                recipe_container.append(recipe);
-
-                $("#results").append(recipe_container);  
-                recipe = "";
-                recipe_container = "";
-                   
+                
+                var recipe_box = $("<div>");
+                recipe_box.addClass("container")
+                recipe_box.append(recipe)
+                recipe_box.append("<br><br>")
+                recipe_container.append(recipe_box);
+                            
             }
+
+            $("#results").append(recipe_container); 
             
 
         });
