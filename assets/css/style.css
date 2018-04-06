@@ -204,6 +204,10 @@ a:hover{
     margin: 127px auto 0;
 }
 
+#welcome-words {
+    color:white;
+}
+
 /*contact*/
 input[type=text], select, textarea {
     width: 100%;
