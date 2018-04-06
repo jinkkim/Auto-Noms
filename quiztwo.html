@@ -2,110 +2,99 @@
 <html>
 <head>
      
-  <title>Take Quiz</title>
+  <title>Make Food</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <!--Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
- 
-  <!-- JQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
- <!-- CSS StyleSheet -->
+  <!-- CSS StyleSheet -->
   <link rel="stylesheet" href="assets/css/style.css">
   
-    
-  <title>Make Food</title>
-
-
 </head>
 
 
-    <body>
+<body>
         <!--header-->
-    <header>
-        <div class="container">
-            <div class="header-top">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                        <p>Georgia Tech Global Learning Center</p>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                        <p>Opening Hours 6:30 pm - 9:30 pm</p>
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <p>Georgia Tech Global Learning Center</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                            <p>Opening Hours 6:30 pm - 9:30 pm</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 visible-xs">
-                        <div class="logo-mobile">
-                            <a href="index.html">
-                                <img src="images/Home/logo.png" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-11 col-xs-12">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        
-                            <!--logo-->
-                            <div class="logo hidden-xs">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 visible-xs">
+                            <div class="logo-mobile">
                                 <a href="index.html">
-                                    <img src="assets/images/logo2.png" />
+                                    <img src="images/Home/logo.png" />
                                 </a>
                             </div>
-
-
-                            <!--Navbar-->
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a href="index.html">HOME</a>
-                                </li>
-                                <li>
-                                    <a href="quiz.html">FIND FOOD</a>
-                                </li>
-                                <li>
-                                    <a href="quiztwo.html">MAKE FOOD</a>
-                                </li>   
-                                <li>
-                                    <a href="reviews.html">SHOPPING LIST</a>
-                                </li>                           
-                                <li>
-                                    <a href="about.html">ABOUT US</a>
-                                </li>
-                                
-                                <li>
-                                    <a href="contact.html">CONTACT Us</a>
-                                </li>
-
-                                
-                            </ul>
-
                         </div>
+                        <div class="col-md-11 col-xs-12">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                                <!--logo-->
+                                <div class="logo hidden-xs">
+                                    <a href="index.html">
+                                        <img src="assets/images/logo2.png" />
+                                    </a>
+                                </div>
+
+
+                                <!--Navbar-->
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <a href="index.html">HOME</a>
+                                    </li>
+                                    <li>
+                                        <a href="quiz.html">FIND FOOD</a>
+                                    </li>
+                                    <li>
+                                        <a href="quiztwo.html">MAKE FOOD</a>
+                                    </li>   
+                                    <li>
+                                        <a href="reviews.html">SHOPPING LIST</a>
+                                    </li>                           
+                                    <li>
+                                        <a href="about.html">ABOUT US</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="contact.html">CONTACT Us</a>
+                                    </li>
+
+                                    
+                                </ul>
+
+                            </div>
+                        </div>
+                        
                     </div>
-                    
                 </div>
-            </div>
-        </nav>
-        <div class="clearfix"></div>
-    </header>
-    <!--end-->
-    
-              <br><br><br>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
+        <!--end-->
+              <!--form container-->  
               <div class="ui container" id="mainInformationDiv">
-                  <div class="logoDiv">
-                      <h2 id="logoText">I AM A PRO, MAKE FOOD MYSELF</h2>
+                  <div class="container-fluid text-center">
+                      <h2 id="logoText">MAKE FOOD</h2>
                       <hr>
                   </div>
 
@@ -121,6 +110,7 @@
                         <div class = "form-group">
                             <label for = "health">Do you have any diet restrictions?</label>
                             <select class = "form-control" type="text" id="health" >
+                                <option value=""></option>
                                 <option value="alcohol-free">alcohol-free</option>
                                 <option value="peanut-free">peanut-free</option>
                                 <option value="sugar-conscious">sugar-conscious</option>
@@ -163,7 +153,7 @@
 
                 <script src="https://developer.edamam.com/attribution/badge.js"></script>
                 <div id="edamam-badge" data-color="white"></div>
-                
-    </body>
-    <script src="assets/js/apptwo.js"></script>
+
+                <script src="assets/js/apptwo.js"></script>               
+</body>
 </html>
