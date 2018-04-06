@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700');
 html, body {
     height: 100%;
@@ -313,6 +314,45 @@ li.dropdown{
     /*background: url('../images/food.jpg');*/
     
 }
+
+#welcome-words {
+    color: white;   
+}
+@keyframes bounceInUp {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    from {
+      opacity: 0;
+      transform: translate3d(0, 3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(0, -20px, 0);
+    }
+  
+    75% {
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    90% {
+      transform: translate3d(0, -5px, 0);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .bounceInUp {
+    animation-name: bounceInUp;
+  }
 .welcome-block-full-image > div {
     background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
     padding: 12px 12px 15px 12px;
@@ -845,7 +885,6 @@ footer .social-grid {
     text-align: left;
     text-transform: uppercase;
 }
-<<<<<<< HEAD
 .single-blog-footer .label-size a {
     color: #fff;
     display: inline-block;
@@ -863,15 +902,6 @@ footer .social-grid {
     float: left;
     font-size: 13px;
     margin: 0 4px 4px 0;
-=======
-
-@keyframes slide {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  } 
-  100% {
->>>>>>> bf0b17b8bd64635627fa0efd0788a208272bc2af
     opacity: 1;
     transition: all 0.4s ease 0s;
     line-height: 1.2;
@@ -1185,7 +1215,6 @@ html .btn-primary:hover{
     background: #000;
     border-color: #000;
 }
-<<<<<<< HEAD
 .btn-circle {
     border-radius: 35px;
 }
@@ -1399,6 +1428,3 @@ mark, .mark {
          position: relative;
        }
         
-=======
-
->>>>>>> bf0b17b8bd64635627fa0efd0788a208272bc2af
