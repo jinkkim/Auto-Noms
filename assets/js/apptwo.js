@@ -76,7 +76,7 @@ $(document).ready(function() {
             var recipe_container = $("<div>");
             recipe_container.addClass("container m-5 p-5");
             
-            for (var i=0; i < 10; i++) {
+            for (var i=0; i < 5; i++) {
                 
                 var recipe = $("<a>");
                 recipe.attr("href",result.hits[i].recipe.url);
