@@ -208,6 +208,11 @@ a:hover{
     color:white;
 }
 
+#about-auto-nom {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+
 /*contact*/
 input[type=text], select, textarea {
     width: 100%;
