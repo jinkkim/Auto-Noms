@@ -5,6 +5,10 @@
   <title>Contact Us</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- JQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -100,10 +104,10 @@
     <div class="container">
     <form action="/action_page.php">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your first name">
 
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name">
 
         <label for="country">Country</label>
         <select id="country" name="country">
@@ -112,12 +116,19 @@
         </select>
 
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:50px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Write us a message" style="height:50px"></textarea>
 
-        <input type="submit" value="Submit">
+        <button class="btn btn-primary" id="contact-submit" type="submit">Submit</button>
     </form>
     </div>
 
+    <script>
+        $("#contact-submit").on("click", function(event) {
+            event.preventDefault();
+            // Alert
+            alert("Message sent!");
+        });
+    </script>
     
 </body>
 </html>
